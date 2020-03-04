@@ -1,0 +1,185 @@
+/*
+Source: http://4-designer.com/2013/08/The-pure-CSS3-paper-style-pure-CSS3-paper-style/
+pour différencier les styles employés dans ce document par rapport aux autres feuilles de style,
+chacun des éléments est suivi par _facture
+*/
+
+
+*_facture {
+    margin:0;
+    padding: 0;
+}
+
+body_facture {
+    background:url(bg_tile.jpg);
+}
+
+.clear_facture {
+    clear:both;
+}
+
+
+h1_facture {
+    color: #cd0000;
+    font:bold 36px Verdana, Geneva, sans-serif;
+    letter-spacing: -2px;
+    text-align: left;
+    margin:10px 60px;
+    text-shadow:1px 2px 1px rgba(255,255,255,0.7);
+}
+/**********shoppingList*********/
+
+.list_facture {
+    position:relative;
+    background: #f5f5f5;
+    color: #555;
+    padding: 0 !important;
+    width:480px;
+    font:22px courier, monospace;
+    border: 1px solid #dedede;
+    box-shadow:1px 2px 4px rgba(0,0,0,0.7);
+    float:left;
+    margin:5px;
+}
+.list:before, .paper:after_facture {
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: #f5f5f5;
+    border: 1px solid #dedede;
+    position: absolute;
+    z-index: -1;
+    box-shadow:1px 2px 4px rgba(0,0,0,0.7);
+}
+
+.list:before_facture {
+    top:-10px;
+    right:-10px;
+}
+
+
+.list li_facture {
+    list-style: none;
+    border-bottom: 1px dotted #ccc;
+    text-indent: 25px;
+    height: auto;
+    padding: 10px;
+    text-transform: capitalize;
+}
+.list li:hover_facture {
+    background-color: #f0f0f0;
+    -webkit-transition: all 0.2s;
+    -moz-transition:    all 0.2s;
+    -ms-transition:     all 0.2s;
+    -o-transition:      all 0.2s;
+}
+.lines_facture {
+    border-left: 1px solid #ffaa9f;
+    border-right: 1px solid #ffaa9f;
+    width: 2px;
+    float: left;
+    height: 520px;
+    margin-left: 40px;
+}
+
+
+.shadow_facture {
+    background: url(images/shadow.png);
+    float:left;
+    width: 500px;
+    height: 12px;
+    -webkit-transition:0.6s;
+}
+
+/**********invoice*********/
+.invoice_facture {
+    padding: 0 !important;
+    width: 500px;
+    height:auto;
+ /*   float:left;????????*/
+/*    margin:-50px 0;
+    margin-left:10px;*/
+    margin:auto;
+    margin-top: 12px;
+    position: center;
+}
+
+.content_facture {
+    background:#FDFDFD;
+    background: -webkit-gradient(linear, 0% 0%, 0% 80%, from(#FFF), to(#F2F2F2));
+    background: -moz-linear-gradient(#FFF,#F2F2F2 80%);
+    color:#333;
+    width:500px;
+    /*height:580px;*/
+    padding:20px 0 10px;
+    float:left;
+    border: 1px solid #dedede;
+    -webkit-transition:all 0.4s;
+    -moz-transition:all 0.4s;
+    -ms-transition:all 0.4s;
+    -o-transition:all 0.4s;
+    box-shadow:1px 2px 4px rgba(0,0,0,0.7);
+
+}
+
+.content:hover_facture {
+    border-bottom-right-radius:140px 30px;
+    box-shadow:6px 6px 6px rgba(0,0,0,0.7);
+}
+
+.invoice p_facture {
+    font:bold 16px courier, monospace;
+    text-align:center;
+    line-height:20px;
+    margin:6px 0;
+}
+.title_facture {
+    font-size:18px;
+}
+
+.line_facture {
+    width:440px;
+    margin:0 30px;
+    height:40px;
+    font:bold 14px courier, monospace;
+    line-height:50px;
+    border-bottom:1px dashed #333;
+}
+
+.listTitle_facture {
+    margin-top:10px;
+    text-align:left;
+    font:22px Arial, Helvetica, sans-serif;
+    text-indent:50px;
+    word-spacing:12px;
+}
+
+.voiceList_facture {
+    width:380px;
+    height:20px;
+    margin:6px auto;
+    font:bold 15px Arial, Helvetica, sans-serif;
+    line-height:20px;
+}
+
+.left_facture {
+    float:left;
+}
+
+.right_facture {
+    float:right;
+}
+
+.footer_facture {
+    width:370px;
+    margin:0 60px;
+    height:auto;
+    min-height:4px;
+    border-top:1px dashed #333;
+}
+
+.footer p_facture {
+    text-align:left;
+    line-height:20px;
+    margin-top:6px;
+}

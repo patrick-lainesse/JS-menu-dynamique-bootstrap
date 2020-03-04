@@ -1,0 +1,117 @@
+/*
+====================================================
+[Feuille de style de la section card où s'affiche le menu]
+
+Réalisée par Patrick Lainesse
+Matricule: 740302
+Dans le cadre du cours IFT 1142, hiver 2020
+====================================================
+
+*/
+
+#divFacture { display: none; }
+
+.bg-image {
+
+    /* Add the blur effect */
+    filter: blur(8px);
+    -webkit-filter: blur(8px);
+
+    /* Full height */
+    height: 100%;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Position text in the middle of the page/image */
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    border: 3px solid #f1f1f1;
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+}
+
+.choix { line-height: 1.7; font-size: 1.05em; font-weight: 400; color: #FFFFFF; text-align: center; }
+
+.divMenu { display: inline; width: 30%; margin: 5%; }
+
+.imgMenu { width: 200px; height: 200px; margin-top: 15px; }
+
+.prix { width: 6em; }
+
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 1200px) {
+
+    section .invoice_facture {
+        /*width: 80%;*/
+    }
+
+    section .content_facture {
+        margin-left: 15px;
+        margin-right: 15px;
+        width: 80%;
+    }
+
+    section .voiceList_facture {
+        margin: auto;
+        line-height:20px;
+    }
+
+    section .footer_facture {
+        margin: auto;
+    }
+
+    section .line_facture {
+        margin: auto;
+        width: 80%;
+    }
+
+    section .divMenu {
+        display: inline-block;
+        width: 80%;
+        margin: auto;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+
+    section .content_facture {
+        margin: auto;
+        width: 300px;
+    }
+
+    section .voiceList_facture {
+        margin: auto;
+        width:200px;
+        line-height:20px;
+    }
+
+    section .footer_facture {
+        margin: auto;
+        width: 200px;
+    }
+
+    section .line_facture {
+        margin: auto;
+        width: 200px;
+    }
+
+    section .divMenu { display: block; }
+
+    section .imgMenu { margin: none; display: inline; }
+
+}
+

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML>
+
+<!--
+
+Travail réalisé par Patrick Lainesse
+Matricule: 740302
+Dans le cadre du cours IFT 1142, hiver 2020
+
+        Les documents codés par moi sont: index.html, menu.css et script_menu.js, et sont situés
+        dans le sous-dossier "common". J'ai identifié la section de index.html où j'ai modifié
+        du code.
+
+        Ressources utilisées:
+        Template css/html: https://colorlib.com/wp/template/luigis/
+        Images: https://stocksnap.io
+        Facture: http://4-designer.com/2013/08/The-pure-CSS3-paper-style-pure-CSS3-paper-style/
+-->
+
+<html lang="fr">
+<head>
+        <title>Trattoria</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="UTF-8">
+
+        <!-- Font -->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
+        <link rel="stylesheet" href="fonts/beyond_the_mountains-webfont.css" type="text/css"/>
+
+        <!-- Stylesheets -->
+        <link href="plugin-frameworks/bootstrap.min.css" rel="stylesheet">
+        <link href="plugin-frameworks/swiper.css" rel="stylesheet">
+        <link href="fonts/ionicons.css" rel="stylesheet">
+        <link href="common/styles.css" rel="stylesheet">
+        <link href="common/menu.css" rel="stylesheet">
+        <link href="common/facture.css" rel="stylesheet">
+
+</head>
+<body>
+
+<header>
+        <div class="container">
+                <a class="logo" href="#"><img src="images/logo-white.png" alt="Logo"></a>
+
+
+                <div class="right-area">
+                        <h6><a class="plr-20 color-white btn-fill-primary" href="#">COMMANDER: (514) 555-01234</a></h6>
+                </div><!-- right-area -->
+
+                <a class="menu-nav-icon" data-menu="#main-menu" href="#"><i class="ion-navicon"></i></a>
+
+                <div class="clearfix"></div>
+        </div><!-- container -->
+</header>
+
+
+<section class="bg-1 h-900x main-slider pos-relative" id="haut">
+        <div class="triangle-up pos-bottom"></div>
+        <div class="container h-100">
+                <div class="dplay-tbl">
+                        <div class="dplay-tbl-cell center-text color-white">
+                                <h5><b>Pas le plus bon. Le meilleur.</b></h5>
+                                <h1 class="mt-30 mb-15">Trattoria</h1>
+                                <h5><a href="#en_teteFacture" class="btn-primaryc plr-25"><b>MENU</b></a></h5>
+                                <br>
+                                <h5><a href="#realise" class="btn-primaryc plr-25"><b>REALISÉ PAR</b></a></h5>
+                        </div><!-- dplay-tbl-cell -->
+
+
+
+
+                </div><!-- dplay-tbl -->
+        </div><!-- container -->
+</section>
+
+
+<!--***************************** section pertinente pour le travail pratique *****************************-->
+<section class="story-area left-text center-sm-text pos-relative" name="sect_menu">
+        <div class="abs-tbl bg-2 w-20 z--1 dplay-md-none"></div>
+        <div class="abs-tbr bg-3 w-20 z--1 dplay-md-none"></div>
+        <div class="container">
+
+                <div class="heading"><!-- début de la section card de sélection du menu-->
+                        <div class="bg-image"></div>
+
+                        <div class="bg-text">
+                                <h3 id="en_teteFacture">Faites votre choix</h3>
+                                <p class="choix">
+                                <div class="divMenu">
+                                        Entrée:
+                                        <select id="entree" name="options_entrees" onchange="afficherInfos()"></select>
+                                        <img src="" alt="Photo de l'entrée" class="imgMenu" id="imgEntree">
+                                        <span id="prixEntree" class="prix"></span>
+                                </div>
+                                <div class="divMenu">
+                                        Repas:
+                                        <select id="repas" name="options_repas" onchange="afficherInfos()"></select>
+                                        <img src="" alt="Photo du repas" class="imgMenu" id="imgRepas">
+                                        <span id="prixRepas" class="prix"></span>
+                                </div>
+                                </p>
+                                <br>
+
+                            <div id="divFacture" class="invoice_facture" style="text-align: center"> <!--début de la section facture style papier-->
+                                <div class="content_facture" id="content_facture">
+                                    <p class="title_facture">La Trattoria</p>
+                                    <p>Pas le meilleur. Le plus bon.</p>
+                                    <div class="line_facture">Facture #352<div class="right_facture" id="datetime"></div></div>
+
+                                    <div class="listTitle_facture">Livraison</div>
+                                    <div class="voiceList_facture">
+                                        <div class="left_facture" id="nomEntreeFact"></div>
+                                        <div class="right_facture" id="prixEntreeFact" name="prixEntree"></div>
+                                    </div>
+
+                                    <div class="voiceList_facture">
+                                        <div class="left_facture" id="nomRepasFact"></div>
+                                        <div class="right_facture" id="prixRepasFact" name="prixRepas"></div>
+                                    </div>
+                                    <br/>
+
+                                    <div class="voiceList_facture">
+                                        <div class="left_facture">Sous-total</div>
+                                        <div class="right_facture"><span id="ss_total"></span></div>
+                                    </div>
+
+                                    <div class="voiceList_facture">
+                                        <div class="left_facture">Taxes</div>
+                                        <div class="right_facture"><span id="taxes"></span></div>
+                                    </div>
+
+                                    <div class="voiceList_facture">
+                                        <div class="left_facture">Total</div>
+                                        <div class="right_facture"><span id="total"></span></div>
+                                    </div>
+
+                                    <br/>
+
+                                    <div class="footer_facture"></div>
+                                    <div class="footer_facture">
+                                        <p>Payable à la livraison</p>
+                                        <p>Bonne fin de journée!</p>
+                                    </div>
+                                </div>
+                                <div class="clear_facture"></div>
+                            </div>                                      <!--fin de la section facture-->
+                        </div>
+
+                </div><!--fin de la section card du menu-->
+        </div><!-- container -->
+</section>
+
+<footer class="pb-50  pt-70 pos-relative" id="realise">
+        <div class="pos-top triangle-bottom"></div>
+        <div class="container-fluid">
+                <a href="index.html"><img src="images/logo-white.png" alt="Logo"></a>
+
+                <div class="pt-30">
+                        <p class="underline-secondary"><b>Travail pratique réalisé par</b></p>
+                        <p>Patrick Lainesse</p>
+                </div>
+
+                <div class="pt-30">
+                    <p class="underline-secondary mb-10"><b>Matricule</b></p>
+                    <a href="mailto:yourmail@gmail.com">740302</a>
+                </div>
+
+                <div class="pt-30">
+                        <p class="underline-secondary mb-10"><b>Courriel</b></p>
+                        <a href="mailto:yourmail@gmail.com">patrick.lainesse@umontreal.ca</a>
+                </div>
+
+            <br>
+            <h5><a href="#haut" class="btn-primaryc plr-25"><b>HAUT DE LA PAGE</b></a></h5>
+
+                <p class="color-light font-9 mt-50 mt-sm-30"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="ion-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+        </div><!-- container -->
+</footer>
+
+<!-- SCIPTS -->
+<script src="plugin-frameworks/jquery-3.2.1.min.js"></script>
+<script src="plugin-frameworks/bootstrap.min.js"></script>
+<script src="plugin-frameworks/swiper.js"></script>
+<script src="common/scripts.js"></script>
+
+<!--script créé pour le travail pratique-->
+<script src="common/script_menu.js"></script>
+
+</body>
+</html>
