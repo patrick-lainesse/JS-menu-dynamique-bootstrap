@@ -1,4 +1,4 @@
-// scripts écrits pour réagir aux sélections de la section menu de la page web
+// script écrit pour réagir aux sélections de la section menu de la page web
 // variables déclarées globalement pour pouvoir y accéder des différentes fonctions
 
 // initialisées à 0 pour éviter d'afficher NaN sur la facture lorsqu'une seule option est choisie
